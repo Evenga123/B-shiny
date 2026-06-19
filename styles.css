@@ -59,7 +59,6 @@ a {
   align-items: center;
   gap: 12px;
   min-width: 0;
-  max-width: calc(100vw - 96px);
 }
 
 .brand-logo {
@@ -69,17 +68,8 @@ a {
   border-radius: var(--radius-sm);
 }
 
-.brand strong,
-.brand small {
+.brand strong {
   display: block;
-}
-
-.brand small {
-  margin-top: 2px;
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.25;
-  max-width: 260px;
 }
 
 .site-nav {
@@ -112,6 +102,19 @@ a {
 
 .nav-toggle {
   display: none;
+}
+
+.header-tagline {
+  position: fixed;
+  z-index: 19;
+  top: 98px;
+  left: clamp(20px, 5vw, 64px);
+  margin: 0;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
 }
 
 .hero {
@@ -481,10 +484,10 @@ figcaption {
 }
 
 @media (max-width: 640px) {
-  .brand small {
-    display: block;
-    max-width: 190px;
-    font-size: 10.5px;
+  .header-tagline {
+    top: 96px;
+    max-width: calc(100vw - 36px);
+    font-size: 12px;
   }
 
   .hero {
