@@ -9,6 +9,8 @@
   --accent-2: #63c0b4;
   --danger: #b64d43;
   --max: 1180px;
+  --radius: 8px;
+  --radius-sm: 6px;
 }
 
 * {
@@ -59,14 +61,11 @@ a {
   min-width: 0;
 }
 
-.brand-mark {
-  display: grid;
-  width: 42px;
-  height: 42px;
-  place-items: center;
-  border: 1px solid rgba(214, 178, 94, 0.6);
-  color: var(--accent);
-  font-weight: 800;
+.brand-logo {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
 }
 
 .brand strong,
@@ -102,6 +101,7 @@ a {
   min-height: 42px;
   padding: 0 18px;
   border: 1px solid rgba(246, 242, 234, 0.3);
+  border-radius: var(--radius-sm);
   font-size: 14px;
   font-weight: 700;
 }
@@ -190,6 +190,7 @@ h1 {
   min-height: 50px;
   padding: 0 22px;
   border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
   font-weight: 800;
 }
 
@@ -204,42 +205,13 @@ h1 {
   color: var(--text);
 }
 
-.hero-panel {
-  position: absolute;
-  right: clamp(20px, 5vw, 64px);
-  bottom: 58px;
-  z-index: 2;
-  width: min(340px, calc(100% - 40px));
-  padding: 22px;
-  background: rgba(16, 20, 24, 0.78);
-  border: 1px solid var(--line);
-  backdrop-filter: blur(14px);
-}
-
-.hero-panel span {
-  color: var(--accent-2);
-  font-size: 13px;
-  font-weight: 800;
-}
-
-.hero-panel strong {
-  display: block;
-  margin: 10px 0;
-  font-size: 22px;
-}
-
-.hero-panel p {
-  margin-bottom: 0;
-  color: var(--muted);
-  line-height: 1.55;
-}
-
 .trust-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background: #0c1014;
+  overflow: hidden;
 }
 
 .trust-strip div {
@@ -303,6 +275,8 @@ h1 {
   padding: 24px;
   background: var(--panel);
   border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
 }
 
 .service-card.featured {
@@ -357,6 +331,7 @@ figure {
   margin: 0;
   background: var(--panel);
   border: 1px solid var(--line);
+  border-radius: var(--radius);
   overflow: hidden;
 }
 
@@ -383,6 +358,7 @@ figcaption {
   padding: 28px;
   background: var(--panel);
   border: 1px solid var(--line);
+  border-radius: var(--radius);
 }
 
 .price-grid .highlight {
@@ -410,6 +386,7 @@ figcaption {
   margin-bottom: 42px;
   background: linear-gradient(135deg, #15191f, #0b0e11);
   border: 1px solid var(--line);
+  border-radius: var(--radius);
 }
 
 .cta-band h2 {
@@ -452,6 +429,7 @@ figcaption {
     place-content: center;
     background: transparent;
     border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
   }
 
   .nav-toggle span {
@@ -476,13 +454,6 @@ figcaption {
 
   .hero {
     min-height: 880px;
-  }
-
-  .hero-panel {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    margin-top: 34px;
   }
 
   .trust-strip,
