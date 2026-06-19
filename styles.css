@@ -113,7 +113,7 @@ a {
 
 .hero {
   position: relative;
-  min-height: 92vh;
+  min-height: 100vh;
   display: grid;
   align-items: end;
   padding: 150px clamp(20px, 5vw, 64px) 58px;
