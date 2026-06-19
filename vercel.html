@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>B SHINY Vercel deploy</title>
-  <meta name="description" content="Tiesiogine B SHINY demo deploy nuoroda i Vercel.">
+  <title>B SHINY Vercel import</title>
+  <meta name="description" content="Tiesioginė B SHINY demo importo nuoroda į Vercel.">
   <style>
     :root {
       --bg: #07090b;
@@ -31,7 +31,7 @@
     }
 
     main {
-      width: min(680px, 100%);
+      width: min(720px, 100%);
       padding: clamp(28px, 7vw, 56px);
       background: rgba(16, 20, 24, 0.88);
       border: 1px solid var(--line);
@@ -51,12 +51,13 @@
       line-height: 1;
     }
 
-    p {
+    p,
+    li {
       color: var(--muted);
       line-height: 1.7;
     }
 
-    a {
+    a.button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -69,6 +70,10 @@
       text-decoration: none;
     }
 
+    code {
+      color: var(--text);
+    }
+
     small {
       display: block;
       margin-top: 18px;
@@ -78,10 +83,16 @@
 </head>
 <body>
   <main>
-    <p>Vercel deploy</p>
+    <p>Vercel import</p>
     <h1>B SHINY demo</h1>
-    <p>Spausk mygtuką ir Vercel atidarys šio projekto importą. Prisijunk prie savo Vercel paskyros, pasirink workspace ir spausk Deploy.</p>
-    <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FEvenga123%2FB-shiny&project-name=b-shiny&repository-name=b-shiny">Atidaryti Vercel deploy</a>
+    <p>Ši nuoroda importuoja jau egzistuojantį GitHub repo. Ji nebando kurti naujo repo, todėl neturėtų rodyti klaidos, kad vardas jau egzistuoja.</p>
+    <ol>
+      <li>Spausk mygtuką.</li>
+      <li>Vercel puslapyje rinkis <code>Import</code> esamam repo.</li>
+      <li>Jei matai <code>Create Repository</code>, tai ne tas kelias - grįžk atgal ir importuok esamą repo <code>Evenga123/B-shiny</code>.</li>
+      <li>Framework Preset palik <code>Other</code>, Build Command palik tuščią, Output Directory palik <code>.</code>.</li>
+    </ol>
+    <a class="button" href="https://vercel.com/new?repository-url=https%3A%2F%2Fgithub.com%2FEvenga123%2FB-shiny&project-name=b-shiny">Importuoti į Vercel</a>
     <small>Repo: Evenga123/B-shiny</small>
   </main>
 </body>
