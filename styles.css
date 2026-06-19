@@ -59,6 +59,7 @@ a {
   align-items: center;
   gap: 12px;
   min-width: 0;
+  max-width: calc(100vw - 96px);
 }
 
 .brand-logo {
@@ -77,6 +78,8 @@ a {
   margin-top: 2px;
   color: var(--muted);
   font-size: 12px;
+  line-height: 1.25;
+  max-width: 260px;
 }
 
 .site-nav {
@@ -479,7 +482,9 @@ figcaption {
 
 @media (max-width: 640px) {
   .brand small {
-    display: none;
+    display: block;
+    max-width: 190px;
+    font-size: 10.5px;
   }
 
   .hero {
