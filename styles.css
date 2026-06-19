@@ -113,7 +113,7 @@ a {
 
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh + 180px);
   display: grid;
   align-items: end;
   padding: 150px clamp(20px, 5vw, 64px) 58px;
@@ -454,7 +454,7 @@ figcaption {
   }
 
   .hero {
-    min-height: 880px;
+    min-height: calc(100vh + 180px);
   }
 
   .trust-strip,
@@ -483,7 +483,7 @@ figcaption {
   }
 
   .hero {
-    min-height: 780px;
+    min-height: calc(100vh + 150px);
     padding-top: 122px;
   }
 
