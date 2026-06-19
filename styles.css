@@ -102,6 +102,7 @@ a {
   padding: 0 18px;
   border: 1px solid rgba(246, 242, 234, 0.3);
   border-radius: var(--radius-sm);
+  color: var(--accent);
   font-size: 14px;
   font-weight: 700;
 }
