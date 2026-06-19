@@ -2,6 +2,8 @@
 
 Automobilių poliravimo ir cheminio valymo svetainės demo versija.
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FEvenga123%2FB-shiny&project-name=b-shiny&repository-name=b-shiny)
+
 ## Failai
 
 - `index.html` - puslapio turinys ir sekcijos.
@@ -10,6 +12,10 @@ Automobilių poliravimo ir cheminio valymo svetainės demo versija.
 - `vercel.json` - Vercel statinio puslapio konfigūracija.
 
 ## Paleidimas per Vercel
+
+Greičiausias kelias: spausk aukščiau esantį `Deploy with Vercel` mygtuką.
+
+Rankiniu būdu:
 
 1. Atsidaryk https://vercel.com/new.
 2. Pasirink GitHub repo `Evenga123/B-shiny`.
