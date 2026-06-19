@@ -9,8 +9,8 @@
   --accent-2: #63c0b4;
   --danger: #b64d43;
   --max: 1180px;
-  --radius: 8px;
-  --radius-sm: 6px;
+  --radius: 16px;
+  --radius-sm: 10px;
 }
 
 * {
