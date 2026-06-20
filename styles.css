@@ -363,47 +363,160 @@ h1 {
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  margin-top: 40px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 44px;
+}
+
+.services-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.services-heading img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+}
+
+.services-heading p {
+  margin: 0;
+  color: var(--accent);
+  font-size: clamp(34px, 5vw, 66px);
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1;
 }
 
 .service-card {
-  min-height: 260px;
-  padding: 24px;
-  background: var(--panel);
+  position: relative;
+  min-height: 390px;
+  overflow: hidden;
+  background: var(--panel) center / cover no-repeat;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  overflow: hidden;
+  isolation: isolate;
 }
 
-.service-card.featured {
-  grid-column: span 2;
+.service-polish {
+  background-image: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=600,h=496,fit=crop/mnlEZKXp9aH1vW74/img_20210610_123830-mjExLx34z0sOP2XZ.jpg");
+}
+
+.service-interior {
+  background-image: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=600,h=624,fit=crop/mnlEZKXp9aH1vW74/passat-Awv5EqpQqXhrgRe7.jpeg");
+}
+
+.service-headlights {
+  background-image: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=568,h=590,fit=crop/mnlEZKXp9aH1vW74/262499791_223498613261048_5002474554644176755_n-A85lqLX6vXiy23pJ.jpeg");
+}
+
+.service-coating {
+  background-image: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=496,h=624,fit=crop/mnlEZKXp9aH1vW74/ford-mustang-YNqo9eyb6gC9GEKW.jpeg");
+}
+
+.service-card::before,
+.service-card::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  transition:
+    opacity 420ms ease,
+    backdrop-filter 420ms ease,
+    transform 420ms ease;
+}
+
+.service-card::before {
+  z-index: -2;
+  background: inherit;
+  transform: scale(1.01);
+}
+
+.service-card::after {
+  z-index: -1;
   background:
-    linear-gradient(rgba(16, 20, 24, 0.64), rgba(16, 20, 24, 0.88)),
-    url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=600,h=496,fit=crop/mnlEZKXp9aH1vW74/img_20210610_123830-mjExLx34z0sOP2XZ.jpg") center / cover;
+    linear-gradient(180deg, rgba(7, 9, 11, 0.12), rgba(7, 9, 11, 0.88)),
+    rgba(7, 9, 11, 0.16);
 }
 
-.service-card span {
-  color: var(--accent);
-  font-weight: 800;
+.service-card:hover::before,
+.service-card:focus-within::before {
+  transform: scale(1.05);
+}
+
+.service-card:hover::after,
+.service-card:focus-within::after {
+  background:
+    linear-gradient(180deg, rgba(7, 9, 11, 0.32), rgba(7, 9, 11, 0.9)),
+    rgba(7, 9, 11, 0.28);
+  backdrop-filter: blur(4px);
+}
+
+.service-card-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 26px;
+  text-align: center;
 }
 
 .service-card h3 {
-  margin: 48px 0 14px;
-  font-size: 24px;
+  margin: 0;
+  font-size: clamp(23px, 2vw, 30px);
+  line-height: 1.08;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.72);
 }
 
 .service-card p {
-  color: var(--muted);
-  line-height: 1.6;
+  max-width: 330px;
+  margin: 18px auto 0;
+  color: rgba(246, 242, 234, 0.86);
+  font-size: 15px;
+  line-height: 1.55;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 380ms ease,
+    transform 380ms ease;
 }
 
 .service-card a {
   display: inline-flex;
-  margin-top: 18px;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  min-height: 42px;
+  margin-top: 22px;
+  padding: 0 18px;
+  border: 1px solid rgba(214, 178, 94, 0.68);
+  border-radius: var(--radius-sm);
+  background: rgba(7, 9, 11, 0.36);
   color: var(--accent);
   font-weight: 800;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 380ms ease,
+    transform 380ms ease,
+    background 380ms ease;
+}
+
+.service-card:hover p,
+.service-card:hover a,
+.service-card:focus-within p,
+.service-card:focus-within a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-card a:hover,
+.service-card a:focus-visible {
+  background: rgba(214, 178, 94, 0.16);
 }
 
 .work-band {
@@ -509,6 +622,73 @@ figcaption {
   border-top: 1px solid var(--line);
 }
 
+.detail-page {
+  min-height: 100vh;
+  padding: clamp(28px, 5vw, 64px);
+  background:
+    linear-gradient(120deg, rgba(7, 9, 11, 0.96), rgba(7, 9, 11, 0.72)),
+    url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1440,fit=crop/mnlEZKXp9aH1vW74/315553811_439086451726710_9005575462549274197_n-AzGOVlnxE9F5oOne.jpeg") center / cover fixed;
+}
+
+.detail-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.detail-brand img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+}
+
+.detail-hero,
+.detail-placeholder {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.detail-hero {
+  display: grid;
+  min-height: 58vh;
+  align-content: center;
+  padding: 80px 0 56px;
+  text-align: center;
+}
+
+.detail-hero h1 {
+  max-width: 920px;
+}
+
+.detail-hero p:not(.eyebrow) {
+  max-width: 720px;
+  margin: 0 auto;
+  color: rgba(246, 242, 234, 0.82);
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.6;
+}
+
+.detail-placeholder {
+  padding: 34px;
+  background: rgba(16, 20, 24, 0.78);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  backdrop-filter: blur(12px);
+}
+
+.detail-placeholder h2 {
+  font-size: clamp(28px, 3vw, 42px);
+}
+
+.detail-placeholder p {
+  max-width: 680px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 @media (max-width: 980px) {
   .site-header {
     grid-template-columns: auto auto;
@@ -561,6 +741,10 @@ figcaption {
   .service-grid,
   .price-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-card {
+    min-height: 360px;
   }
 
   .intro,
@@ -639,6 +823,25 @@ figcaption {
     grid-template-columns: 1fr;
   }
 
+  .services-heading {
+    gap: 12px;
+  }
+
+  .services-heading img {
+    width: 54px;
+    height: 54px;
+  }
+
+  .service-card {
+    min-height: 330px;
+  }
+
+  .service-card p,
+  .service-card a {
+    opacity: 1;
+    transform: none;
+  }
+
   .trust-card {
     display: grid;
     gap: 8px;
@@ -667,10 +870,6 @@ figcaption {
     gap: 30px;
     padding-top: 76px;
     padding-bottom: 76px;
-  }
-
-  .service-card.featured {
-    grid-column: auto;
   }
 
   .section,
