@@ -46,17 +46,36 @@ porscheBackgroundStyle.textContent = `
     background-color: rgba(7, 9, 11, 0.30) !important;
   }
 
+  #kontaktai.cta-band {
+    grid-template-columns: minmax(320px, 0.8fr) minmax(560px, 1.35fr);
+    max-width: min(1380px, calc(100% - 48px));
+    gap: clamp(28px, 4vw, 54px);
+    align-items: stretch;
+    padding-left: clamp(24px, 4vw, 56px);
+    padding-right: clamp(24px, 4vw, 56px);
+  }
+
+  #kontaktai.cta-band > div:first-child {
+    align-self: center;
+  }
+
   .contact-panel {
     display: grid;
-    gap: 16px;
-    min-width: min(460px, 100%);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    min-width: 0;
   }
 
   .contact-card {
+    min-height: 142px;
     padding: 20px;
     background: rgba(7, 9, 11, 0.58);
     border: 1px solid var(--line);
     border-radius: var(--radius);
+  }
+
+  .contact-card:nth-child(3) {
+    grid-column: span 2;
   }
 
   .contact-card h3 {
@@ -75,7 +94,8 @@ porscheBackgroundStyle.textContent = `
 
   .contact-card ul {
     display: grid;
-    gap: 4px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px 18px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -110,6 +130,13 @@ porscheBackgroundStyle.textContent = `
     font-size: 14px;
   }
 
+  @media (max-width: 980px) {
+    #kontaktai.cta-band {
+      grid-template-columns: 1fr;
+      max-width: min(980px, calc(100% - 36px));
+    }
+  }
+
   @media (max-width: 640px) {
     .intro::before,
     .services::before,
@@ -122,8 +149,19 @@ porscheBackgroundStyle.textContent = `
       opacity: 1;
     }
 
-    .contact-panel {
-      min-width: 0;
+    #kontaktai.cta-band {
+      max-width: calc(100% - 24px);
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    .contact-panel,
+    .contact-card ul {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-card:nth-child(3) {
+      grid-column: auto;
     }
   }
 `;
@@ -143,33 +181,10 @@ if (contactSection) {
       </div>
     </div>
     <div class="contact-panel" aria-label="B Shiny kontaktinė informacija">
-      <article class="contact-card">
-        <h3>Adresas</h3>
-        <p>Šilutės pl. 100<br>95264 Klaipėda</p>
-      </article>
-      <article class="contact-card">
-        <h3>Telefonas</h3>
-        <p><a href="tel:+37065923444">(8-659) 23444</a></p>
-      </article>
-      <article class="contact-card">
-        <h3>Darbo laikas</h3>
-        <ul>
-          <li>Pirmadienis: 09:00 - 18:00</li>
-          <li>Antradienis: 09:00 - 18:00</li>
-          <li>Trečiadienis: 09:00 - 18:00</li>
-          <li>Ketvirtadienis: 09:00 - 18:00</li>
-          <li>Penktadienis: 09:00 - 18:00</li>
-          <li>Šeštadienis: 10:00 - 15:00</li>
-          <li>Sekmadienis: nedirbame</li>
-        </ul>
-      </article>
-      <article class="contact-card">
-        <h3>Socialiniai tinklai</h3>
-        <div class="contact-socials">
-          <a href="https://www.facebook.com/BSHINYKLP" target="_blank" rel="noopener">Facebook</a>
-          <a href="https://www.instagram.com/bshiny_/" target="_blank" rel="noopener">Instagram</a>
-        </div>
-      </article>
+      <article class="contact-card"><h3>Adresas</h3><p>Šilutės pl. 100<br>95264 Klaipėda</p></article>
+      <article class="contact-card"><h3>Telefonas</h3><p><a href="tel:+37065923444">(8-659) 23444</a></p></article>
+      <article class="contact-card"><h3>Darbo laikas</h3><ul><li>Pirmadienis: 09:00 - 18:00</li><li>Antradienis: 09:00 - 18:00</li><li>Trečiadienis: 09:00 - 18:00</li><li>Ketvirtadienis: 09:00 - 18:00</li><li>Penktadienis: 09:00 - 18:00</li><li>Šeštadienis: 10:00 - 15:00</li><li>Sekmadienis: nedirbame</li></ul></article>
+      <article class="contact-card"><h3>Socialiniai tinklai</h3><div class="contact-socials"><a href="https://www.facebook.com/BSHINYKLP" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/bshiny_/" target="_blank" rel="noopener">Instagram</a></div></article>
     </div>
   `;
 }
