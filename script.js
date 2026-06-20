@@ -21,8 +21,8 @@ porscheBackgroundStyle.textContent = `
     position: absolute;
     inset: 0;
     z-index: -2;
-    background: url("assets/porsche-dark-bg.jpg") center / cover fixed;
-    opacity: 0.86;
+    background: url("assets/porsche-dark-bg.jpg") center center / cover fixed;
+    opacity: 1;
     content: "";
   }
 
@@ -35,7 +35,7 @@ porscheBackgroundStyle.textContent = `
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: rgba(7, 9, 11, 0.34);
+    background: rgba(7, 9, 11, 0.18);
     content: "";
   }
 
@@ -43,7 +43,7 @@ porscheBackgroundStyle.textContent = `
   .work-band,
   .price-grid article,
   .cta-band {
-    background-color: rgba(7, 9, 11, 0.42) !important;
+    background-color: rgba(7, 9, 11, 0.30) !important;
   }
 
   @media (max-width: 640px) {
@@ -54,8 +54,8 @@ porscheBackgroundStyle.textContent = `
     .work-band::before,
     .cta-band::before {
       background-attachment: scroll;
-      background-position: center top;
-      opacity: 0.95;
+      background-position: center center;
+      opacity: 1;
     }
   }
 `;
