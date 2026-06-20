@@ -36,8 +36,8 @@ body::before {
   inset: 0;
   z-index: 0;
   background:
-    radial-gradient(circle at 50% 28%, rgba(7, 9, 11, 0.56), rgba(7, 9, 11, 0.86) 54%, rgba(7, 9, 11, 0.94) 100%),
-    rgba(7, 9, 11, 0.7);
+    radial-gradient(circle at 50% 28%, rgba(7, 9, 11, 0.28), rgba(7, 9, 11, 0.62) 54%, rgba(7, 9, 11, 0.78) 100%),
+    rgba(7, 9, 11, 0.34);
   pointer-events: none;
   content: "";
 }
@@ -263,7 +263,7 @@ h1 {
   grid-template-columns: repeat(4, 1fr);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  background: rgba(12, 16, 20, 0.88);
+  background: rgba(12, 16, 20, 0.76);
   overflow: hidden;
 }
 
@@ -347,6 +347,7 @@ h1 {
 .section,
 .work-band,
 .cta-band {
+  position: relative;
   max-width: var(--max);
   margin: 0 auto;
   padding: 92px 24px;
@@ -541,7 +542,7 @@ h1 {
 
 .work-band {
   max-width: none;
-  background: rgba(13, 17, 21, 0.88);
+  background: rgba(13, 17, 21, 0.76);
 }
 
 .work-band .section-heading,
@@ -587,14 +588,14 @@ figcaption {
 
 .price-grid article {
   padding: 28px;
-  background: rgba(16, 20, 24, 0.9);
+  background: rgba(16, 20, 24, 0.82);
   border: 1px solid var(--line);
   border-radius: var(--radius);
 }
 
 .price-grid .highlight {
   border-color: rgba(214, 178, 94, 0.64);
-  background: linear-gradient(180deg, rgba(214, 178, 94, 0.15), rgba(16, 20, 24, 0.92));
+  background: linear-gradient(180deg, rgba(214, 178, 94, 0.15), rgba(16, 20, 24, 0.82));
 }
 
 .price {
@@ -723,7 +724,7 @@ figcaption {
   gap: 28px;
   align-items: center;
   margin-bottom: 42px;
-  background: linear-gradient(135deg, rgba(21, 25, 31, 0.92), rgba(11, 14, 17, 0.92));
+  background: linear-gradient(135deg, rgba(21, 25, 31, 0.82), rgba(11, 14, 17, 0.82));
   border: 1px solid var(--line);
   border-radius: var(--radius);
 }
