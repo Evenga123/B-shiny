@@ -1,0 +1,260 @@
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 12px;
+  left: 12px;
+  transform: translateY(-160%);
+  padding: 10px 14px;
+  background: var(--accent);
+  color: #15110a;
+  border-radius: var(--radius-sm);
+  font-weight: 800;
+  transition: transform 180ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+:focus-visible {
+  outline: 2px solid rgba(214, 178, 94, 0.9);
+  outline-offset: 4px;
+}
+
+.button,
+.header-cta,
+.site-nav a,
+.service-card a,
+.contact-socials a {
+  transition: color 220ms ease, background 220ms ease, border-color 220ms ease, transform 220ms ease;
+}
+
+.button:hover,
+.header-cta:hover,
+.service-card a:hover,
+.contact-socials a:hover {
+  transform: translateY(-1px);
+}
+
+.button:active,
+.header-cta:active,
+.service-card a:active,
+.contact-socials a:active {
+  transform: translateY(0);
+}
+
+.intro,
+.services,
+.pricing,
+.faq-section,
+.work-band,
+.cta-band {
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.intro::before,
+.services::before,
+.pricing::before,
+.faq-section::before,
+.work-band::before,
+.cta-band::before {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: url("assets/porsche-dark-bg.jpg") center center / cover fixed;
+  content: "";
+}
+
+.intro::after,
+.services::after,
+.pricing::after,
+.faq-section::after,
+.work-band::after,
+.cta-band::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(7, 9, 11, 0.22);
+  content: "";
+}
+
+.trust-strip,
+.work-band,
+.price-grid article,
+.cta-band {
+  background-color: rgba(7, 9, 11, 0.36);
+}
+
+.services-heading h2 {
+  margin: 0;
+  color: var(--accent);
+  font-size: clamp(30px, 4.1vw, 52px);
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+#kontaktai.cta-band {
+  grid-template-columns: minmax(320px, 0.8fr) minmax(560px, 1.35fr);
+  max-width: min(1380px, calc(100% - 48px));
+  gap: clamp(28px, 4vw, 54px);
+  align-items: stretch;
+  padding-left: clamp(24px, 4vw, 56px);
+  padding-right: clamp(24px, 4vw, 56px);
+}
+
+#kontaktai.cta-band > div:first-child {
+  align-self: center;
+}
+
+.contact-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  min-width: 0;
+  font-style: normal;
+}
+
+.contact-card {
+  min-height: 142px;
+  padding: 20px;
+  background: rgba(7, 9, 11, 0.62);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.contact-card:nth-child(3) {
+  grid-column: span 2;
+}
+
+.contact-card h3 {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.contact-card p,
+.contact-card li {
+  margin: 0;
+  color: rgba(246, 242, 234, 0.86);
+  line-height: 1.65;
+}
+
+.contact-card ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-card a {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.contact-note {
+  margin-top: 14px;
+  color: var(--accent) !important;
+  font-weight: 800;
+}
+
+.contact-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.contact-socials a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid rgba(214, 178, 94, 0.48);
+  border-radius: var(--radius-sm);
+  color: var(--accent);
+  font-size: 14px;
+}
+
+@media (max-width: 980px) {
+  #kontaktai.cta-band {
+    grid-template-columns: 1fr;
+    max-width: min(980px, calc(100% - 36px));
+  }
+
+  .site-nav {
+    border-top: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    gap: 16px;
+  }
+
+  .hero-content {
+    top: 40vh;
+  }
+
+  .hero-actions {
+    top: calc(100vh - 158px);
+  }
+
+  .section-heading h2,
+  .cta-band h2 {
+    overflow-wrap: anywhere;
+  }
+
+  .service-card-content {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .intro::before,
+  .services::before,
+  .pricing::before,
+  .faq-section::before,
+  .work-band::before,
+  .cta-band::before {
+    background-attachment: scroll;
+    background-position: center center;
+  }
+
+  #kontaktai.cta-band {
+    max-width: calc(100% - 24px);
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .contact-panel,
+  .contact-card ul {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card:nth-child(3) {
+    grid-column: auto;
+  }
+
+  .services-heading h2 {
+    font-size: clamp(28px, 9vw, 40px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
