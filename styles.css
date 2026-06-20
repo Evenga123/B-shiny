@@ -62,8 +62,8 @@ a {
 }
 
 .brand-logo {
-  width: 54px;
-  height: 54px;
+  width: 72px;
+  height: 72px;
   object-fit: contain;
   border-radius: var(--radius-sm);
 }
@@ -74,9 +74,8 @@ a {
 }
 
 .brand small {
-  margin-top: 2px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.25;
 }
 
