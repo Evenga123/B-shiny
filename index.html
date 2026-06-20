@@ -8,136 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=service-cards-pages">
-  <style>
-    .faq-section {
-      padding-top: 48px;
-    }
-
-    .faq-heading {
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
-
-    .faq-heading h2 {
-      max-width: 820px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .faq-list {
-      display: grid;
-      gap: 12px;
-      max-width: 940px;
-      margin: 42px auto 0;
-    }
-
-    .faq-item {
-      overflow: hidden;
-      background: linear-gradient(135deg, rgba(16, 20, 24, 0.96), rgba(10, 13, 16, 0.96));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-    }
-
-    .faq-question {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 18px;
-      align-items: center;
-      width: 100%;
-      padding: 22px 24px;
-      background: transparent;
-      border: 0;
-      color: var(--text);
-      cursor: pointer;
-      font: inherit;
-      font-size: clamp(17px, 1.6vw, 21px);
-      font-weight: 800;
-      line-height: 1.35;
-      text-align: left;
-    }
-
-    .faq-question:hover,
-    .faq-question:focus-visible {
-      color: var(--accent);
-    }
-
-    .faq-question:focus-visible {
-      outline: 1px solid rgba(214, 178, 94, 0.75);
-      outline-offset: -8px;
-    }
-
-    .faq-icon {
-      position: relative;
-      width: 24px;
-      height: 24px;
-      border: 1px solid rgba(214, 178, 94, 0.58);
-      border-radius: 50%;
-      flex: 0 0 auto;
-    }
-
-    .faq-icon::before,
-    .faq-icon::after {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 10px;
-      height: 2px;
-      background: var(--accent);
-      border-radius: 999px;
-      content: "";
-      transform: translate(-50%, -50%);
-      transition: transform 260ms ease;
-    }
-
-    .faq-icon::after {
-      transform: translate(-50%, -50%) rotate(90deg);
-    }
-
-    .faq-question[aria-expanded="true"] .faq-icon::after {
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 420ms ease;
-    }
-
-    .faq-answer p {
-      max-width: 820px;
-      margin: 0;
-      padding: 0 24px 24px;
-      color: var(--muted);
-      font-size: 16px;
-      line-height: 1.72;
-    }
-
-    .faq-item.is-open {
-      border-color: rgba(214, 178, 94, 0.36);
-    }
-
-    @media (max-width: 640px) {
-      .faq-section {
-        padding-top: 44px;
-      }
-
-      .faq-list {
-        margin-top: 30px;
-      }
-
-      .faq-question {
-        gap: 14px;
-        padding: 19px 18px;
-      }
-
-      .faq-answer p {
-        padding: 0 18px 20px;
-        font-size: 15px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css?v=90671a3">
 </head>
 <body>
   <header class="site-header" data-header>
@@ -183,22 +54,10 @@
     </section>
 
     <section class="trust-strip" aria-label="Pagrindinės paslaugos">
-      <button class="trust-card" type="button">
-        <span class="trust-title">Blizgesio atstatymas</span>
-        <span class="trust-reveal">Veidrodinis paviršiaus efektas</span>
-      </button>
-      <button class="trust-card" type="button">
-        <span class="trust-title">Salono giluminis valymas</span>
-        <span class="trust-reveal">Nepriekaištinga salono švara</span>
-      </button>
-      <button class="trust-card" type="button">
-        <span class="trust-title">Žibintų poliravimas</span>
-        <span class="trust-reveal">Skaidrumas ir geresnis matomumas</span>
-      </button>
-      <button class="trust-card" type="button">
-        <span class="trust-title">Keraminė apsauga</span>
-        <span class="trust-reveal">Ilgalaikė apsauga ir lengvesnė priežiūra</span>
-      </button>
+      <button class="trust-card" type="button"><span class="trust-title">Blizgesio atstatymas</span><span class="trust-reveal">Veidrodinis paviršiaus efektas</span></button>
+      <button class="trust-card" type="button"><span class="trust-title">Salono giluminis valymas</span><span class="trust-reveal">Nepriekaištinga salono švara</span></button>
+      <button class="trust-card" type="button"><span class="trust-title">Žibintų poliravimas</span><span class="trust-reveal">Skaidrumas ir geresnis matomumas</span></button>
+      <button class="trust-card" type="button"><span class="trust-title">Keraminė apsauga</span><span class="trust-reveal">Ilgalaikė apsauga ir lengvesnė priežiūra</span></button>
     </section>
 
     <section class="section intro">
@@ -219,88 +78,33 @@
       </div>
 
       <div class="service-grid">
-        <article class="service-card service-polish">
-          <div class="service-card-content">
-            <h3>Kėbulo poliravimas</h3>
-            <p>Atkuriamas dažų blizgesys, pašalinami smulkūs įbrėžimai ir suteikiamas veidrodinis efektas.</p>
-            <a href="paslaugos/kebulo-poliravimas/">Daugiau</a>
-          </div>
-        </article>
-        <article class="service-card service-interior">
-          <div class="service-card-content">
-            <h3>Cheminis salono valymas</h3>
-            <p>Gilus sėdynių, kilimų, plastiko ir sunkiai pasiekiamų vietų valymas.</p>
-            <a href="paslaugos/cheminis-salono-valymas/">Daugiau</a>
-          </div>
-        </article>
-        <article class="service-card service-headlights">
-          <div class="service-card-content">
-            <h3>Žibintų atnaujinimas</h3>
-            <p>Pašalinamas matinimas, atkuriamas skaidrumas ir pagerinamas matomumas.</p>
-            <a href="paslaugos/zibintu-atnaujinimas/">Daugiau</a>
-          </div>
-        </article>
-        <article class="service-card service-coating">
-          <div class="service-card-content">
-            <h3>Apsauginės dangos</h3>
-            <p>Ilgalaikė dažų apsauga, lengvesnė priežiūra ir ilgiau išliekantis blizgesys.</p>
-            <a href="paslaugos/apsaugines-dangos/">Daugiau</a>
-          </div>
-        </article>
+        <article class="service-card service-polish"><div class="service-card-content"><h3>Kėbulo poliravimas</h3><p>Atkuriamas dažų blizgesys, pašalinami smulkūs įbrėžimai ir suteikiamas veidrodinis efektas.</p><a href="paslaugos/kebulo-poliravimas/">Daugiau</a></div></article>
+        <article class="service-card service-interior"><div class="service-card-content"><h3>Cheminis salono valymas</h3><p>Gilus sėdynių, kilimų, plastiko ir sunkiai pasiekiamų vietų valymas.</p><a href="paslaugos/cheminis-salono-valymas/">Daugiau</a></div></article>
+        <article class="service-card service-headlights"><div class="service-card-content"><h3>Žibintų atnaujinimas</h3><p>Pašalinamas matinimas, atkuriamas skaidrumas ir pagerinamas matomumas.</p><a href="paslaugos/zibintu-atnaujinimas/">Daugiau</a></div></article>
+        <article class="service-card service-coating"><div class="service-card-content"><h3>Apsauginės dangos</h3><p>Ilgalaikė dažų apsauga, lengvesnė priežiūra ir ilgiau išliekantis blizgesys.</p><a href="paslaugos/apsaugines-dangos/">Daugiau</a></div></article>
       </div>
     </section>
 
     <section class="work-band" id="darbai">
-      <div class="section-heading">
-        <p class="eyebrow">Atlikti darbai</p>
-        <h2>Realūs automobiliai, aiškus rezultatas</h2>
-      </div>
+      <div class="section-heading"><p class="eyebrow">Atlikti darbai</p><h2>Realūs automobiliai, aiškus rezultatas</h2></div>
       <div class="work-grid">
-        <figure>
-          <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=496,h=624,fit=crop/mnlEZKXp9aH1vW74/ford-mustang-YNqo9eyb6gC9GEKW.jpeg" alt="Ford Mustang po poliravimo">
-          <figcaption>Ford Mustang GT</figcaption>
-        </figure>
-        <figure class="wide">
-          <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=600,h=624,fit=crop/mnlEZKXp9aH1vW74/passat-Awv5EqpQqXhrgRe7.jpeg" alt="VW Passat CC po poliravimo">
-          <figcaption>VW Passat CC</figcaption>
-        </figure>
-        <figure>
-          <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=568,h=590,fit=crop/mnlEZKXp9aH1vW74/262499791_223498613261048_5002474554644176755_n-A85lqLX6vXiy23pJ.jpeg" alt="BMW kabrioletas po atnaujinimo">
-          <figcaption>BMW E36 Cabrio</figcaption>
-        </figure>
+        <figure><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=496,h=624,fit=crop/mnlEZKXp9aH1vW74/ford-mustang-YNqo9eyb6gC9GEKW.jpeg" alt="Ford Mustang po poliravimo"><figcaption>Ford Mustang GT</figcaption></figure>
+        <figure class="wide"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=600,h=624,fit=crop/mnlEZKXp9aH1vW74/passat-Awv5EqpQqXhrgRe7.jpeg" alt="VW Passat CC po poliravimo"><figcaption>VW Passat CC</figcaption></figure>
+        <figure><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=568,h=590,fit=crop/mnlEZKXp9aH1vW74/262499791_223498613261048_5002474554644176755_n-A85lqLX6vXiy23pJ.jpeg" alt="BMW kabrioletas po atnaujinimo"><figcaption>BMW E36 Cabrio</figcaption></figure>
       </div>
     </section>
 
     <section class="section pricing" id="kainos">
-      <div class="section-heading">
-        <p class="eyebrow">Kainos</p>
-        <h2>Paprasti paketai demo versijai</h2>
-      </div>
+      <div class="section-heading"><p class="eyebrow">Kainos</p><h2>Paprasti paketai demo versijai</h2></div>
       <div class="price-grid">
-        <article>
-          <h3>Express blizgesys</h3>
-          <p class="price">nuo 90 Eur</p>
-          <p>Greitas kėbulo atgaivinimas prieš pardavimą ar sezoną.</p>
-        </article>
-        <article class="highlight">
-          <h3>Detalus poliravimas</h3>
-          <p class="price">nuo 180 Eur</p>
-          <p>Populiariausias pasirinkimas ryškiam lako ir spalvos atstatymui.</p>
-        </article>
-        <article>
-          <h3>Salono valymas</h3>
-          <p class="price">nuo 70 Eur</p>
-          <p>Giluminis valymas po žiemos, kelionių ar kasdienio naudojimo.</p>
-        </article>
+        <article><h3>Express blizgesys</h3><p class="price">nuo 90 Eur</p><p>Greitas kėbulo atgaivinimas prieš pardavimą ar sezoną.</p></article>
+        <article class="highlight"><h3>Detalus poliravimas</h3><p class="price">nuo 180 Eur</p><p>Populiariausias pasirinkimas ryškiam lako ir spalvos atstatymui.</p></article>
+        <article><h3>Salono valymas</h3><p class="price">nuo 70 Eur</p><p>Giluminis valymas po žiemos, kelionių ar kasdienio naudojimo.</p></article>
       </div>
     </section>
 
     <section class="section faq-section" id="duk">
-      <div class="section-heading faq-heading">
-        <p class="eyebrow">DUK</p>
-        <h2>Dažniausiai užduodami klausimai</h2>
-      </div>
-
+      <div class="section-heading faq-heading"><p class="eyebrow">DUK</p><h2>Dažniausiai užduodami klausimai</h2></div>
       <div class="faq-list" data-faq-list>
         <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Kam reikalingas automobilio poliravimas?</span><span class="faq-icon" aria-hidden="true"></span></button><div class="faq-answer"><p>Automobilio poliravimas padeda pašalinti smulkius įbrėžimus, hologramas, oksidacijos žymes ir atgaivina dažų blizgesį. Po procedūros automobilio spalva tampa ryškesnė, o paviršius – lygesnis ir estetiškesnis. Tai puikus būdas atnaujinti automobilio išvaizdą prieš pardavimą arba tiesiog norint džiaugtis tvarkingu automobiliu. Profesionaliai atliktas poliravimas yra saugus automobilio dažų sluoksniui.</p></div></article>
         <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Kiek kainuoja automobilio poliravimas ir kiek laiko jis trunka?</span><span class="faq-icon" aria-hidden="true"></span></button><div class="faq-answer"><p>Poliravimo kaina priklauso nuo automobilio dydžio, dažų būklės ir pasirinkto poliravimo lygio. Dažniausiai procedūra trunka nuo vienos iki dviejų dienų. Tiksli kaina nustatoma įvertinus automobilį ir kliento lūkesčius. Investicija atsiperka ilgalaikiu estetišku vaizdu ir geresne automobilio priežiūra.</p></div></article>
@@ -315,40 +119,10 @@
       </div>
     </section>
 
-    <section class="cta-band" id="kontaktai">
-      <div>
-        <p class="eyebrow">Kontaktai</p>
-        <h2>Parašyk, kokį automobilį nori atnaujinti.</h2>
-        <p>Demo kontaktus pakeisk savo telefono numeriu, el. paštu ir realiu adresu Klaipėdoje.</p>
-      </div>
-      <div class="contact-actions">
-        <a class="button primary" href="tel:+37060000000">+370 600 00000</a>
-        <a class="button ghost" href="mailto:info@bshiny.lt">info@bshiny.lt</a>
-      </div>
-    </section>
+    <section class="cta-band" id="kontaktai"><div><p class="eyebrow">Kontaktai</p><h2>Parašyk, kokį automobilį nori atnaujinti.</h2><p>Demo kontaktus pakeisk savo telefono numeriu, el. paštu ir realiu adresu Klaipėdoje.</p></div><div class="contact-actions"><a class="button primary" href="tel:+37060000000">+370 600 00000</a><a class="button ghost" href="mailto:info@bshiny.lt">info@bshiny.lt</a></div></section>
   </main>
 
-  <footer class="site-footer">
-    <span>© <span data-year></span> B SHINY demo</span>
-    <a href="#top">Į viršų</a>
-  </footer>
-
-  <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Kam reikalingas automobilio poliravimas?","acceptedAnswer":{"@type":"Answer","text":"Automobilio poliravimas padeda pašalinti smulkius įbrėžimus, hologramas, oksidacijos žymes ir atgaivina dažų blizgesį. Po procedūros automobilio spalva tampa ryškesnė, o paviršius – lygesnis ir estetiškesnis. Tai puikus būdas atnaujinti automobilio išvaizdą prieš pardavimą arba tiesiog norint džiaugtis tvarkingu automobiliu. Profesionaliai atliktas poliravimas yra saugus automobilio dažų sluoksniui."}},{"@type":"Question","name":"Kiek kainuoja automobilio poliravimas ir kiek laiko jis trunka?","acceptedAnswer":{"@type":"Answer","text":"Poliravimo kaina priklauso nuo automobilio dydžio, dažų būklės ir pasirinkto poliravimo lygio. Dažniausiai procedūra trunka nuo vienos iki dviejų dienų. Tiksli kaina nustatoma įvertinus automobilį ir kliento lūkesčius. Investicija atsiperka ilgalaikiu estetišku vaizdu ir geresne automobilio priežiūra."}},{"@type":"Question","name":"Kas yra nano keraminė danga ir kokią naudą ji suteikia?","acceptedAnswer":{"@type":"Answer","text":"Nano keraminė danga sukuria papildomą apsauginį sluoksnį ant automobilio dažų paviršiaus. Ji padeda apsaugoti nuo UV spindulių, purvo, druskų ir kitų aplinkos veiksnių. Automobilį tampa lengviau plauti, nes nešvarumai prasčiau prikimba prie paviršiaus. Taip pat ilgiau išlieka gilus blizgesys ir tvarkinga automobilio išvaizda."}},{"@type":"Question","name":"Kiek laiko laikosi keraminė danga?","acceptedAnswer":{"@type":"Answer","text":"Keraminės dangos ilgaamžiškumas priklauso nuo pasirinktos dangos kokybės ir automobilio priežiūros. Dažniausiai profesionaliai užtepta danga tarnauja nuo 1 iki 5 metų. Reguliarus švelnus plovimas ir tinkamos priežiūros priemonės padeda išlaikyti geriausias jos savybes. Rekomenduojama periodiškai atlikti dangos būklės patikrą."}},{"@type":"Question","name":"Ar automobilio poliravimas ir keramika yra saugūs?","acceptedAnswer":{"@type":"Answer","text":"Taip, profesionaliai atliekamos procedūros yra visiškai saugios automobilio paviršiams. Prieš darbus įvertinama dažų būklė ir parenkami tinkami metodai bei priemonės. Darbai atliekami kontroliuojant poliravimo intensyvumą, kad būtų išsaugotas dažų sluoksnis. Kokybiškai atliktos paslaugos nekenkia automobiliui ir pagerina jo išvaizdą."}},{"@type":"Question","name":"Kada verta atlikti žibintų poliravimą?","acceptedAnswer":{"@type":"Answer","text":"Žibintų poliravimas rekomenduojamas tada, kai plastikas tampa matinis, pageltęs arba sumažėja šviesos sklaida. Procedūra atkuria žibintų skaidrumą ir pagerina matomumą tamsiu paros metu. Tai ne tik estetikos, bet ir saugumo klausimas. Tinkamai atliktas žibintų atnaujinimas gali ženkliai prailginti jų tarnavimo laiką."}},{"@type":"Question","name":"Kiek laiko trunka ir kiek kainuoja žibintų poliravimas?","acceptedAnswer":{"@type":"Answer","text":"Žibintų poliravimo trukmė dažniausiai yra nuo 30 minučių iki 2 valandų, priklausomai nuo jų būklės. Kaina priklauso nuo pažeidimų lygio ir naudojamos apsaugos po poliravimo. Po procedūros rekomenduojama padengti žibintus apsauginiu sluoksniu, kuris padeda ilgiau išlaikyti skaidrumą. Tiksli kaina pateikiama apžiūrėjus automobilį."}},{"@type":"Question","name":"Ką pašalina salono cheminis valymas?","acceptedAnswer":{"@type":"Answer","text":"Salono cheminis valymas pašalina įsisenėjusias dėmes, nemalonius kvapus, dulkes, bakterijas ir susikaupusius nešvarumus. Valomos sėdynės, kiliminė danga, durų apdailos bei kiti salono paviršiai. Po procedūros salonas tampa švaresnis, gaivesnis ir malonesnis kasdieniam naudojimui. Tai ypač naudinga šeimoms su vaikais, gyvūnų augintojų automobiliams arba prieš automobilio pardavimą."}},{"@type":"Question","name":"Kiek laiko trunka salono cheminis valymas ir kada galima naudotis automobiliu?","acceptedAnswer":{"@type":"Answer","text":"Priklausomai nuo automobilio dydžio ir užterštumo, cheminis valymas dažniausiai trunka nuo 4 iki 8 valandų. Kartais gali prireikti papildomo laiko salonui visiškai išdžiūti. Automobiliu rekomenduojama naudotis tik tada, kai paviršiai yra visiškai sausi. Taip užtikrinamas geriausias valymo rezultatas ir komfortas."}},{"@type":"Question","name":"Kaip prižiūrėti automobilį po poliravimo, keramikos ar salono valymo?","acceptedAnswer":{"@type":"Answer","text":"Po atliktų procedūrų rekomenduojama naudoti kokybiškas, automobilio paviršiams pritaikytas priežiūros priemones. Venkite agresyvių chemikalų, šiurkščių kempinių ir automatinių plovyklų su šepečiais. Reguliarus rankinis plovimas padės ilgiau išsaugoti dažų blizgesį, keraminės dangos savybes bei švarų saloną. Tinkama priežiūra leidžia maksimaliai prailginti atliktų paslaugų efektą."}}]}
-  </script>
-  <script>
-    document.querySelectorAll(".faq-question").forEach((button) => {
-      button.addEventListener("click", () => {
-        const item = button.closest(".faq-item");
-        const answer = item && item.querySelector(".faq-answer");
-        const isOpen = button.getAttribute("aria-expanded") === "true";
-        if (!item || !answer) return;
-        button.setAttribute("aria-expanded", String(!isOpen));
-        item.classList.toggle("is-open", !isOpen);
-        answer.style.maxHeight = isOpen ? "0px" : `${answer.scrollHeight}px`;
-      });
-    });
-  </script>
-  <script src="script.js"></script>
+  <footer class="site-footer"><span>© <span data-year></span> B SHINY demo</span><a href="#top">Į viršų</a></footer>
+  <script src="script.js?v=faq-section"></script>
 </body>
 </html>
