@@ -1,3 +1,8 @@
+const enhancementStyles = document.createElement("link");
+enhancementStyles.rel = "stylesheet";
+enhancementStyles.href = "enhancements.css?v=06d4215";
+document.head.appendChild(enhancementStyles);
+
 const navToggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
 const year = document.querySelector("[data-year]");
