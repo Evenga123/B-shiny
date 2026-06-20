@@ -22,7 +22,7 @@ porscheBackgroundStyle.textContent = `
     inset: 0;
     z-index: -2;
     background: url("assets/porsche-dark-bg.jpg") center / cover fixed;
-    opacity: 0.72;
+    opacity: 0.86;
     content: "";
   }
 
@@ -35,7 +35,7 @@ porscheBackgroundStyle.textContent = `
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: rgba(7, 9, 11, 0.46);
+    background: rgba(7, 9, 11, 0.34);
     content: "";
   }
 
@@ -43,7 +43,7 @@ porscheBackgroundStyle.textContent = `
   .work-band,
   .price-grid article,
   .cta-band {
-    background-color: rgba(7, 9, 11, 0.58) !important;
+    background-color: rgba(7, 9, 11, 0.42) !important;
   }
 
   @media (max-width: 640px) {
@@ -55,7 +55,7 @@ porscheBackgroundStyle.textContent = `
     .cta-band::before {
       background-attachment: scroll;
       background-position: center top;
-      opacity: 0.86;
+      opacity: 0.95;
     }
   }
 `;
@@ -75,3 +75,15 @@ if (navToggle && nav) {
     navToggle.setAttribute("aria-expanded", String(open));
   });
 }
+
+document.querySelectorAll(".faq-question").forEach((button) => {
+  button.addEventListener("click", () => {
+    const item = button.closest(".faq-item");
+    const answer = item && item.querySelector(".faq-answer");
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+    if (!item || !answer) return;
+    button.setAttribute("aria-expanded", String(!isOpen));
+    item.classList.toggle("is-open", !isOpen);
+    answer.style.maxHeight = isOpen ? "0px" : `${answer.scrollHeight}px`;
+  });
+});
