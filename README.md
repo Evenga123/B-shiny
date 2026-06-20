@@ -2,7 +2,7 @@
 
 Automobilių poliravimo ir cheminio valymo svetainės demo versija.
 
-[Atidaryti demo kaip puslapį](https://raw.githack.com/Evenga123/B-shiny/main/index.html)
+[Atidaryti demo kaip puslapį](https://evenga123.github.io/B-shiny/)
 
 [Importuoti į Vercel](https://vercel.com/new?repository-url=https%3A%2F%2Fgithub.com%2FEvenga123%2FB-shiny&project-name=b-shiny)
 
@@ -16,9 +16,11 @@ Automobilių poliravimo ir cheminio valymo svetainės demo versija.
 
 ## Greita peržiūra
 
-Kol Vercel projektas dar neimportuotas, demo galima atsidaryti per `raw.githack.com` peržiūrą:
+Pagrindinė demo nuoroda:
 
-https://raw.githack.com/Evenga123/B-shiny/main/index.html
+https://evenga123.github.io/B-shiny/
+
+Jeigu GitHub Pages ką tik įjungtas, pirmas atsidarymas gali pradėti veikti po kelių minučių.
 
 ## Paleidimas per Vercel
 
