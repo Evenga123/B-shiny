@@ -25,33 +25,27 @@ html {
 body {
   position: relative;
   margin: 0;
-  background: transparent;
+  background: var(--bg) url("assets/porsche-dark-bg.jpg") center / cover fixed;
   color: var(--text);
   font-family: Inter, Arial, sans-serif;
   isolation: isolate;
 }
 
-body::before,
-body::after {
+body::before {
   position: fixed;
   inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 50% 28%, rgba(7, 9, 11, 0.56), rgba(7, 9, 11, 0.86) 54%, rgba(7, 9, 11, 0.94) 100%),
+    rgba(7, 9, 11, 0.7);
   pointer-events: none;
   content: "";
 }
 
-body::before {
-  z-index: -2;
-  background-image: url("assets/porsche-dark-bg.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-}
-
-body::after {
-  z-index: -1;
-  background:
-    radial-gradient(circle at 50% 28%, rgba(7, 9, 11, 0.56), rgba(7, 9, 11, 0.86) 54%, rgba(7, 9, 11, 0.94) 100%),
-    rgba(7, 9, 11, 0.7);
+main,
+.site-footer {
+  position: relative;
+  z-index: 1;
 }
 
 img {
@@ -269,7 +263,7 @@ h1 {
   grid-template-columns: repeat(4, 1fr);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  background: #0c1014;
+  background: rgba(12, 16, 20, 0.88);
   overflow: hidden;
 }
 
@@ -547,7 +541,7 @@ h1 {
 
 .work-band {
   max-width: none;
-  background: #0d1115;
+  background: rgba(13, 17, 21, 0.88);
 }
 
 .work-band .section-heading,
@@ -593,14 +587,14 @@ figcaption {
 
 .price-grid article {
   padding: 28px;
-  background: var(--panel);
+  background: rgba(16, 20, 24, 0.9);
   border: 1px solid var(--line);
   border-radius: var(--radius);
 }
 
 .price-grid .highlight {
   border-color: rgba(214, 178, 94, 0.64);
-  background: linear-gradient(180deg, rgba(214, 178, 94, 0.15), rgba(16, 20, 24, 1));
+  background: linear-gradient(180deg, rgba(214, 178, 94, 0.15), rgba(16, 20, 24, 0.92));
 }
 
 .price {
@@ -729,7 +723,7 @@ figcaption {
   gap: 28px;
   align-items: center;
   margin-bottom: 42px;
-  background: linear-gradient(135deg, #15191f, #0b0e11);
+  background: linear-gradient(135deg, rgba(21, 25, 31, 0.92), rgba(11, 14, 17, 0.92));
   border: 1px solid var(--line);
   border-radius: var(--radius);
 }
@@ -896,7 +890,7 @@ figcaption {
 }
 
 @media (max-width: 640px) {
-  body::before {
+  body {
     background-attachment: scroll;
   }
 
