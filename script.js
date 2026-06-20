@@ -1,6 +1,6 @@
 const enhancementStyles = document.createElement("link");
 enhancementStyles.rel = "stylesheet";
-enhancementStyles.href = "enhancements.css?v=06d4215";
+enhancementStyles.href = "enhancements.css?v=ccfe9cf";
 document.head.appendChild(enhancementStyles);
 
 const navToggle = document.querySelector("[data-nav-toggle]");
