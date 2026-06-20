@@ -46,6 +46,70 @@ porscheBackgroundStyle.textContent = `
     background-color: rgba(7, 9, 11, 0.30) !important;
   }
 
+  .contact-panel {
+    display: grid;
+    gap: 16px;
+    min-width: min(460px, 100%);
+  }
+
+  .contact-card {
+    padding: 20px;
+    background: rgba(7, 9, 11, 0.58);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
+
+  .contact-card h3 {
+    margin: 0 0 10px;
+    color: var(--accent);
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  .contact-card p,
+  .contact-card li {
+    margin: 0;
+    color: rgba(246, 242, 234, 0.86);
+    line-height: 1.65;
+  }
+
+  .contact-card ul {
+    display: grid;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .contact-card a {
+    color: var(--text);
+    font-weight: 800;
+  }
+
+  .contact-note {
+    margin-top: 14px !important;
+    color: var(--accent) !important;
+    font-weight: 800;
+  }
+
+  .contact-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  .contact-socials a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
+    padding: 0 14px;
+    border: 1px solid rgba(214, 178, 94, 0.48);
+    border-radius: var(--radius-sm);
+    color: var(--accent);
+    font-size: 14px;
+  }
+
   @media (max-width: 640px) {
     .intro::before,
     .services::before,
@@ -57,9 +121,58 @@ porscheBackgroundStyle.textContent = `
       background-position: center center;
       opacity: 1;
     }
+
+    .contact-panel {
+      min-width: 0;
+    }
   }
 `;
 document.head.appendChild(porscheBackgroundStyle);
+
+const contactSection = document.querySelector("#kontaktai");
+if (contactSection) {
+  contactSection.innerHTML = `
+    <div>
+      <p class="eyebrow">Kontaktai</p>
+      <h2>Susisiekite su B SHINY</h2>
+      <p>Automobilio kėbulo poliravimas, cheminis salono valymas, žibintų atnaujinimas ir apsauginės dangos Klaipėdoje.</p>
+      <p class="contact-note">Prieš atvykstant reikalinga registracija žinute arba telefonu.</p>
+      <div class="contact-actions">
+        <a class="button primary" href="tel:+37065923444">+370 659 23444</a>
+        <a class="button ghost" href="https://www.google.com/maps/search/?api=1&query=%C5%A0ilut%C4%97s%20pl.%20100%2C%2095264%20Klaip%C4%97da" target="_blank" rel="noopener">Rodyti žemėlapyje</a>
+      </div>
+    </div>
+    <div class="contact-panel" aria-label="B Shiny kontaktinė informacija">
+      <article class="contact-card">
+        <h3>Adresas</h3>
+        <p>Šilutės pl. 100<br>95264 Klaipėda</p>
+      </article>
+      <article class="contact-card">
+        <h3>Telefonas</h3>
+        <p><a href="tel:+37065923444">(8-659) 23444</a></p>
+      </article>
+      <article class="contact-card">
+        <h3>Darbo laikas</h3>
+        <ul>
+          <li>Pirmadienis: 09:00 - 18:00</li>
+          <li>Antradienis: 09:00 - 18:00</li>
+          <li>Trečiadienis: 09:00 - 18:00</li>
+          <li>Ketvirtadienis: 09:00 - 18:00</li>
+          <li>Penktadienis: 09:00 - 18:00</li>
+          <li>Šeštadienis: 10:00 - 15:00</li>
+          <li>Sekmadienis: nedirbame</li>
+        </ul>
+      </article>
+      <article class="contact-card">
+        <h3>Socialiniai tinklai</h3>
+        <div class="contact-socials">
+          <a href="https://www.facebook.com/BSHINYKLP" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/bshiny_/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </article>
+    </div>
+  `;
+}
 
 const navToggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
