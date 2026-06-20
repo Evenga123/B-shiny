@@ -68,7 +68,12 @@ body {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url("assets/porsche-911-bg.jpg") center center / cover fixed;
+  background-color: #07090b;
+  background-image: url("assets/porsche-911-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: min(760px, 90vw) auto;
+  background-attachment: fixed;
   content: "";
 }
 
@@ -81,7 +86,9 @@ body {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: rgba(7, 9, 11, 0.48);
+  background:
+    radial-gradient(circle at center, rgba(7, 9, 11, 0.18), rgba(7, 9, 11, 0.76) 68%),
+    rgba(7, 9, 11, 0.38);
   content: "";
 }
 
@@ -229,6 +236,7 @@ body {
   .work-band::before,
   .cta-band::before {
     background-attachment: scroll;
+    background-size: 100vw auto;
     background-position: center center;
   }
 
