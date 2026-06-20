@@ -21,6 +21,10 @@
   outline-offset: 4px;
 }
 
+body {
+  background: var(--bg) !important;
+}
+
 .button,
 .header-cta,
 .site-nav a,
@@ -64,7 +68,7 @@
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url("assets/porsche-dark-bg.jpg") center center / cover fixed;
+  background: url("assets/porsche-911-bg.jpg") center center / cover fixed;
   content: "";
 }
 
@@ -77,7 +81,7 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: rgba(7, 9, 11, 0.22);
+  background: rgba(7, 9, 11, 0.48);
   content: "";
 }
 
@@ -85,7 +89,7 @@
 .work-band,
 .price-grid article,
 .cta-band {
-  background-color: rgba(7, 9, 11, 0.36);
+  background-color: rgba(7, 9, 11, 0.42);
 }
 
 .services-heading h2 {
@@ -122,7 +126,7 @@
 .contact-card {
   min-height: 142px;
   padding: 20px;
-  background: rgba(7, 9, 11, 0.62);
+  background: rgba(7, 9, 11, 0.68);
   border: 1px solid var(--line);
   border-radius: var(--radius);
 }
