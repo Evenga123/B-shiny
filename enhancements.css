@@ -1,9 +1,3 @@
-:root {
-  --cherry: #6f1618;
-  --cherry-soft: rgba(111, 22, 24, 0.36);
-  --cherry-glow: rgba(111, 22, 24, 0.42);
-}
-
 .skip-link {
   position: fixed;
   z-index: 100;
@@ -32,7 +26,7 @@
 .site-nav a,
 .service-card a,
 .contact-socials a {
-  transition: color 220ms ease, background 220ms ease, border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+  transition: color 220ms ease, background 220ms ease, border-color 220ms ease, transform 220ms ease;
 }
 
 .button:hover,
@@ -47,32 +41,6 @@
 .service-card a:active,
 .contact-socials a:active {
   transform: translateY(0);
-}
-
-.button.primary:hover,
-.header-cta:hover {
-  box-shadow: 0 0 0 1px rgba(111, 22, 24, 0.42), 0 16px 36px rgba(111, 22, 24, 0.28);
-}
-
-.button.ghost:hover,
-.service-card a:hover,
-.contact-socials a:hover {
-  border-color: rgba(111, 22, 24, 0.72);
-  box-shadow: 0 14px 34px rgba(111, 22, 24, 0.22);
-}
-
-.hero::after {
-  position: absolute;
-  right: -18vw;
-  bottom: -28vh;
-  z-index: 1;
-  width: 62vw;
-  height: 62vw;
-  min-width: 420px;
-  min-height: 420px;
-  background: radial-gradient(circle, rgba(111, 22, 24, 0.34) 0%, rgba(111, 22, 24, 0.14) 32%, rgba(111, 22, 24, 0) 68%);
-  pointer-events: none;
-  content: "";
 }
 
 .intro,
@@ -109,9 +77,7 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background:
-    linear-gradient(135deg, rgba(111, 22, 24, 0.08), rgba(7, 9, 11, 0.22) 38%, rgba(7, 9, 11, 0.24)),
-    rgba(7, 9, 11, 0.2);
+  background: rgba(7, 9, 11, 0.22);
   content: "";
 }
 
@@ -120,12 +86,6 @@
 .price-grid article,
 .cta-band {
   background-color: rgba(7, 9, 11, 0.36);
-}
-
-.trust-card:hover::before,
-.trust-card:focus-visible::before,
-.trust-card:active::before {
-  background: linear-gradient(135deg, rgba(111, 22, 24, 0.28), rgba(7, 9, 11, 0.62));
 }
 
 .services-heading h2 {
@@ -138,45 +98,6 @@
   text-transform: uppercase;
 }
 
-.service-card {
-  box-shadow: inset 0 -1px 0 rgba(111, 22, 24, 0.28);
-}
-
-.service-card::after {
-  border-bottom: 3px solid rgba(111, 22, 24, 0);
-}
-
-.service-card:hover,
-.service-card:focus-within {
-  border-color: rgba(111, 22, 24, 0.56);
-  box-shadow: 0 22px 52px rgba(111, 22, 24, 0.18), inset 0 -3px 0 rgba(111, 22, 24, 0.68);
-}
-
-.service-card:hover::after,
-.service-card:focus-within::after {
-  background:
-    linear-gradient(180deg, rgba(111, 22, 24, 0.24), rgba(7, 9, 11, 0.9)),
-    rgba(7, 9, 11, 0.26);
-}
-
-.price-grid .highlight {
-  box-shadow: 0 18px 48px rgba(111, 22, 24, 0.18);
-}
-
-.faq-item.is-open {
-  position: relative;
-  border-color: rgba(111, 22, 24, 0.62);
-  box-shadow: 0 18px 42px rgba(111, 22, 24, 0.16);
-}
-
-.faq-item.is-open::before {
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 4px;
-  background: linear-gradient(180deg, var(--accent), var(--cherry));
-  content: "";
-}
-
 #kontaktai.cta-band {
   grid-template-columns: minmax(320px, 0.8fr) minmax(560px, 1.35fr);
   max-width: min(1380px, calc(100% - 48px));
@@ -184,8 +105,6 @@
   align-items: stretch;
   padding-left: clamp(24px, 4vw, 56px);
   padding-right: clamp(24px, 4vw, 56px);
-  border-color: rgba(111, 22, 24, 0.34);
-  box-shadow: 0 24px 70px rgba(111, 22, 24, 0.16);
 }
 
 #kontaktai.cta-band > div:first-child {
@@ -203,7 +122,7 @@
 .contact-card {
   min-height: 142px;
   padding: 20px;
-  background: linear-gradient(145deg, rgba(111, 22, 24, 0.08), rgba(7, 9, 11, 0.66));
+  background: rgba(7, 9, 11, 0.62);
   border: 1px solid var(--line);
   border-radius: var(--radius);
 }
@@ -286,12 +205,6 @@
 
   .hero-actions {
     top: calc(100vh - 158px);
-  }
-
-  .hero::after {
-    right: -44vw;
-    bottom: -18vh;
-    opacity: 0.82;
   }
 
   .section-heading h2,
