@@ -72,7 +72,7 @@ body {
   background-image: url("assets/porsche-911-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: min(760px, 90vw) auto;
+  background-size: min(920px, 118vw) auto;
   background-attachment: fixed;
   content: "";
 }
@@ -87,8 +87,8 @@ body {
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(circle at center, rgba(7, 9, 11, 0.18), rgba(7, 9, 11, 0.76) 68%),
-    rgba(7, 9, 11, 0.38);
+    radial-gradient(circle at center, rgba(7, 9, 11, 0.08), rgba(7, 9, 11, 0.68) 70%),
+    rgba(7, 9, 11, 0.3);
   content: "";
 }
 
@@ -96,7 +96,7 @@ body {
 .work-band,
 .price-grid article,
 .cta-band {
-  background-color: rgba(7, 9, 11, 0.42);
+  background-color: rgba(7, 9, 11, 0.36);
 }
 
 .services-heading h2 {
@@ -236,8 +236,8 @@ body {
   .work-band::before,
   .cta-band::before {
     background-attachment: scroll;
-    background-size: 100vw auto;
-    background-position: center center;
+    background-size: 145vw auto;
+    background-position: center 42%;
   }
 
   #kontaktai.cta-band {
