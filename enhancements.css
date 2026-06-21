@@ -69,7 +69,7 @@ body {
   isolation: isolate;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
-    url('/porsche-911-bg.jpg?v=2');
+    url('/B-shiny/porsche-911-bg.jpg?v=2');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
