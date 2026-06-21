@@ -1,8 +1,3 @@
-const enhancementStyles = document.createElement("link");
-enhancementStyles.rel = "stylesheet";
-enhancementStyles.href = "enhancements.css?v=section-bands-1";
-document.head.appendChild(enhancementStyles);
-
 const sectionThemes = [
   [".trust-strip", "section-dark"],
   [".intro", "section-gray"],
