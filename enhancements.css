@@ -59,7 +59,13 @@ body {
   overflow: hidden;
 }
 
-.dark-fixed-bg {
+.dark-fixed-bg,
+.intro,
+.services,
+.pricing,
+.faq-section,
+.work-band,
+.cta-band {
   position: relative;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
@@ -71,7 +77,19 @@ body {
 }
 
 .dark-fixed-bg::before,
-.dark-fixed-bg::after {
+.dark-fixed-bg::after,
+.intro::before,
+.intro::after,
+.services::before,
+.services::after,
+.pricing::before,
+.pricing::after,
+.faq-section::before,
+.faq-section::after,
+.work-band::before,
+.work-band::after,
+.cta-band::before,
+.cta-band::after {
   display: none !important;
 }
 
@@ -212,7 +230,13 @@ body {
 }
 
 @media (max-width: 768px) {
-  .dark-fixed-bg {
+  .dark-fixed-bg,
+  .intro,
+  .services,
+  .pricing,
+  .faq-section,
+  .work-band,
+  .cta-band {
     background-attachment: scroll;
   }
 }
