@@ -1,7 +1,22 @@
 const enhancementStyles = document.createElement("link");
 enhancementStyles.rel = "stylesheet";
-enhancementStyles.href = "enhancements.css?v=clean-bg-1";
+enhancementStyles.href = "enhancements.css?v=section-bands-1";
 document.head.appendChild(enhancementStyles);
+
+const sectionThemes = [
+  [".trust-strip", "section-dark"],
+  [".intro", "section-gray"],
+  [".services", "section-dark"],
+  [".work-band", "section-gray"],
+  [".pricing", "section-dark"],
+  [".faq-section", "section-gray"],
+  [".cta-band", "section-dark"]
+];
+
+sectionThemes.forEach(([selector, theme]) => {
+  const section = document.querySelector(selector);
+  section?.classList.add(theme, "section-transition");
+});
 
 const navToggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
