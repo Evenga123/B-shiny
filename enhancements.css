@@ -25,6 +25,27 @@ body {
   background: var(--bg) !important;
 }
 
+#hero-title,
+#why-title {
+  font-size: 0;
+}
+
+#hero-title::before {
+  content: "Atnaujiname ne tik automobilio blizgesį – atgaiviname jo sielą";
+  font-size: clamp(36px, 4.8vw, 64px);
+}
+
+#why-title::before {
+  content: "Poliravimas atkuria ne tik blizgesį, bet ir tikrąją automobilio išvaizdą";
+  font-size: clamp(34px, 4.4vw, 62px);
+}
+
+#hero-title::before,
+#why-title::before {
+  display: block;
+  line-height: inherit;
+}
+
 .button,
 .header-cta,
 .site-nav a,
@@ -277,6 +298,10 @@ body {
 
   .hero-actions {
     top: calc(100vh - 158px);
+  }
+
+  #hero-title::before {
+    font-size: clamp(31px, 10vw, 42px);
   }
 
   .section-heading h2,
