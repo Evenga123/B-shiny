@@ -1,6 +1,6 @@
 const enhancementStyles = document.createElement("link");
 enhancementStyles.rel = "stylesheet";
-enhancementStyles.href = "enhancements.css?v=2fdbaf3";
+enhancementStyles.href = "enhancements.css?v=d221531";
 document.head.appendChild(enhancementStyles);
 
 document
