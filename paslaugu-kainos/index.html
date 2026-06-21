@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="lt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paslaugų kainoraštis | B SHINY</title>
+  <meta name="description" content="B SHINY paslaugų kainoraštis: automobilių poliravimas, nano keraminė danga, žibintų poliravimas, salono cheminis valymas ir kėbulo apsauga.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#07090b">
+  <link rel="canonical" href="https://evenga123.github.io/B-shiny/paslaugu-kainos/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://assets.zyrosite.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=seo-ux-1">
+  <style>
+    body {
+      background: #050505 !important;
+    }
+
+    .price-page {
+      min-height: 100vh;
+      padding-top: 132px;
+      background:
+        linear-gradient(180deg, rgba(5, 5, 5, 0.94), rgba(16, 18, 20, 0.98) 44%, rgba(5, 5, 5, 0.98));
+    }
+
+    .price-hero,
+    .price-table-section,
+    .price-page-cta {
+      max-width: min(1240px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .price-hero {
+      display: grid;
+      gap: 22px;
+      padding: clamp(52px, 7vw, 92px) 0 42px;
+      text-align: center;
+    }
+
+    .price-hero h1 {
+      max-width: 980px;
+      margin: 0 auto;
+      font-size: clamp(42px, 6vw, 78px);
+    }
+
+    .price-hero p:not(.eyebrow) {
+      max-width: 820px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(17px, 1.6vw, 21px);
+      line-height: 1.7;
+    }
+
+    .price-table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(7, 9, 11, 0.74);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+    }
+
+    .price-table {
+      width: 100%;
+      min-width: 980px;
+      border-collapse: collapse;
+    }
+
+    .price-table th,
+    .price-table td {
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .price-table th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: rgba(16, 18, 20, 0.98);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .price-table td {
+      color: rgba(246, 242, 234, 0.86);
+      font-size: 14.5px;
+      line-height: 1.55;
+    }
+
+    .price-table tbody tr:hover {
+      background: rgba(214, 178, 94, 0.06);
+    }
+
+    .price-table .category,
+    .price-table .service,
+    .price-table .price-value {
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    .price-table .price-value {
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .price-actions,
+    .price-page-cta .contact-actions {
+      justify-content: center;
+    }
+
+    .price-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .price-page-cta {
+      display: grid;
+      justify-items: center;
+      gap: 18px;
+      margin-top: clamp(54px, 7vw, 92px);
+      margin-bottom: 54px;
+      padding: clamp(34px, 5vw, 58px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(16, 18, 20, 0.92), rgba(7, 9, 11, 0.92));
+      text-align: center;
+    }
+
+    .price-page-cta h2 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 52px);
+    }
+
+    .price-page-cta p {
+      max-width: 640px;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 980px) {
+      .price-page {
+        padding-top: 112px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .price-page {
+        padding-top: 102px;
+      }
+
+      .price-hero,
+      .price-table-section,
+      .price-page-cta {
+        max-width: calc(100% - 24px);
+      }
+
+      .price-table th,
+      .price-table td {
+        padding: 15px 16px;
+      }
+
+      .price-actions .button,
+      .price-page-cta .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" data-header>
+    <a class="brand" href="../" aria-label="B Shiny pradžia">
+      <img class="brand-logo" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=168,fit=crop,q=95/mnlEZKXp9aH1vW74/logo-AMqwXqqlKJUe2yqj.png" width="88" height="88" alt="B SHINY logotipas">
+      <span><small>Automobilių estetikos studija</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Atidaryti meniu" aria-expanded="false" aria-controls="main-navigation" data-nav-toggle><span></span><span></span></button>
+    <nav class="site-nav" id="main-navigation" aria-label="Pagrindinė navigacija" data-nav><a href="../#paslaugos">Paslaugos</a><a href="../#darbai">Darbai</a><a href="../#kainos">Kainos</a><a href="../#duk">DUK</a><a href="../#kontaktai">Kontaktai</a></nav>
+    <a class="header-cta" href="../#kontaktai">Susisiekti</a>
+  </header>
+
+  <main class="price-page">
+    <section class="price-hero" aria-labelledby="price-title">
+      <p class="eyebrow">B SHINY</p>
+      <h1 id="price-title">Paslaugų kainoraštis</h1>
+      <p>Čia pateiktos orientacinės paslaugos. Tiksli kaina nustatoma įvertinus automobilio būklę ir kliento poreikius.</p>
+      <div class="price-actions">
+        <a class="button ghost" href="../">Grįžti į pagrindinį puslapį</a>
+      </div>
+    </section>
+
+    <section class="price-table-section" aria-label="Paslaugų kainoraščio lentelė">
+      <div class="price-table-wrap">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>Kategorija</th>
+              <th>Paslauga</th>
+              <th>Aprašymas</th>
+              <th>Trukmė</th>
+              <th>Kaina</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="category">Automobilio poliravimas</td><td class="service">Express blizgesio atstatymas</td><td>Greitas paviršiaus atgaivinimas, lengvas blizgesio sugrąžinimas ir vizualinis paruošimas.</td><td>3-5 val.</td><td class="price-value">€___</td></tr>
+            <tr><td class="category">Automobilio poliravimas</td><td class="service">Vieno etapo poliravimas</td><td>Smulkių įbrėžimų, oksidacijos ir blankumo mažinimas, suteikiant gilesnį dažų blizgesį.</td><td>1 diena</td><td class="price-value">€___</td></tr>
+            <tr><td class="category">Automobilio poliravimas</td><td class="service">Dviejų etapų lako korekcija</td><td>Gilesnė lako korekcija, skirta ryškesniems defektams mažinti ir sodresniam atspindžiui išgauti.</td><td>1-2 dienos</td><td class="price-value">€___</td></tr>
+            <tr><td class="category">Automobilio poliravimas</td><td class="service">Pilna kėbulo korekcija</td><td>Kruopštus viso kėbulo poliravimas, orientuotas į maksimaliai tvarkingą ir premium rezultatą.</td><td>2-3 dienos</td><td class="price-value">Kaina derinama</td></tr>
+            <tr><td class="category">Nano keraminė danga</td><td class="service">1 metų apsauginė danga</td><td>Trumpesnio laikotarpio apsauga nuo purvo, UV poveikio ir kasdienės aplinkos.</td><td>1 diena</td><td class="price-value">€___</td></tr>
+            <tr><td class="category">Nano keraminė danga</td><td class="service">3 metų keraminė danga</td><td>Ilgiau išliekantis hidrofobinis efektas, blizgesys ir lengvesnė automobilio priežiūra.</td><td>1-2 dienos</td><td class="price-value">€___</td></tr>
+            <tr><td class="category">Nano keraminė danga</td><td class="service">5 metų premium keramika</td><td>Aukštesnio lygio apsauga su ilgesniu tarnavimo laiku ir ryškesniu paviršiaus gyliu.</td><td>2 dienos</td><td class="price-value">Kaina derinama</td></tr>
+            <tr><td class="category">Žibintų poliravimas</td><td class="service">Priekinių žibintų atnaujinimas</td><td>Matinio ir pageltusio sluoksnio pašalinimas, skaidrumo ir šviesos pralaidumo atkūrimas.</td><td>1-2 val.</td><td class="price-value">€___</td></tr>
+            <tr><td class="category">Žibintų poliravimas</td><td class="service">Žibintų poliravimas su apsauga</td><td>Žibintų atnaujinimas ir papildomas apsauginis sluoksnis ilgesniam skaidrumo išlaikymui.</td><td>2-3 val.</td><td class="price-value">€___</td></tr>
+            <tr><td class="category">Salono cheminis valymas</td><td class="service">Sėdynių cheminis valymas</td><td>Tekstilinių arba kitų paviršių dėmių, kvapų ir susikaupusių nešvarumų šalinimas.</td><td>2-4 val.</td><td class="price-value">€___</td></tr>
+            <tr><td class="category">Salono cheminis valymas</td><td class="service">Pilnas salono giluminis valymas</td><td>Sėdynių, kilimų, durų apdailų, plastiko ir sunkiai pasiekiamų vietų valymas.</td><td>4-8 val.</td><td class="price-value">€___</td></tr>
+            <tr><td class="category">Salono cheminis valymas</td><td class="service">Kvapų neutralizavimas</td><td>Nemalonių kvapų mažinimas ir salono gaivos atkūrimas po intensyvaus naudojimo.</td><td>1-3 val.</td><td class="price-value">€___</td></tr>
+            <tr><td class="category">Kėbulo apsauga</td><td class="service">Vaško apsauga</td><td>Greitas apsauginis sluoksnis, suteikiantis blizgesį ir trumpalaikę paviršiaus apsaugą.</td><td>2-4 val.</td><td class="price-value">€___</td></tr>
+            <tr><td class="category">Kėbulo apsauga</td><td class="service">Hidrofobinė apsauga</td><td>Paviršiaus padengimas priemone, kuri padeda vandeniui ir purvui lengviau nubėgti nuo dažų.</td><td>3-5 val.</td><td class="price-value">€___</td></tr>
+            <tr><td class="category">Kėbulo apsauga</td><td class="service">Stiklų hidrofobinė danga</td><td>Priekinių ir šoninių stiklų padengimas geresniam vandens nubėgimui bei matomumui lietuje.</td><td>1-2 val.</td><td class="price-value">€___</td></tr>
+            <tr><td class="category">Interjero priežiūra</td><td class="service">Odos valymas ir kondicionavimas</td><td>Odos paviršių valymas, maitinimas ir apsauga nuo išsausėjimo bei kasdienio dėvėjimosi.</td><td>2-4 val.</td><td class="price-value">€___</td></tr>
+            <tr><td class="category">Interjero priežiūra</td><td class="service">Plastiko ir panelių atnaujinimas</td><td>Vidaus plastiko detalių valymas ir estetiško, tvarkingo paviršiaus atkūrimas.</td><td>1-3 val.</td><td class="price-value">€___</td></tr>
+            <tr><td class="category">Priešpardaviminis paruošimas</td><td class="service">Išorės paruošimas pardavimui</td><td>Kėbulo plovimas, blizgesio atgaivinimas ir vizualinis automobilio pateikimo pagerinimas.</td><td>4-8 val.</td><td class="price-value">€___</td></tr>
+            <tr><td class="category">Priešpardaviminis paruošimas</td><td class="service">Vidaus paruošimas pardavimui</td><td>Salono švaros, kvapo ir bendro įspūdžio pagerinimas prieš automobilio pardavimą.</td><td>4-8 val.</td><td class="price-value">€___</td></tr>
+            <tr><td class="category">Priešpardaviminis paruošimas</td><td class="service">Pilnas automobilio paruošimas</td><td>Išorės ir vidaus estetikos darbų paketas, skirtas geriausiam automobilio pateikimui.</td><td>1-2 dienos</td><td class="price-value">Kaina derinama</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="price-page-cta" aria-labelledby="offer-title">
+      <p class="eyebrow">Kontaktai</p>
+      <h2 id="offer-title">Norite tikslaus pasiūlymo?</h2>
+      <p>Parašykite arba paskambinkite, o tikslią kainą pasiūlysime įvertinę automobilio būklę, darbų apimtį ir pageidaujamą rezultatą.</p>
+      <div class="contact-actions">
+        <a class="button primary" href="../#kontaktai">Susisiekti</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>© <span data-year></span> B SHINY</span><a href="../">Į pagrindinį</a></footer>
+  <script>
+    const navToggle = document.querySelector('[data-nav-toggle]');
+    const nav = document.querySelector('[data-nav]');
+    const year = document.querySelector('[data-year]');
+
+    if (year) year.textContent = new Date().getFullYear();
+
+    if (navToggle && nav) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('is-open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    }
+  </script>
+</body>
+</html>
