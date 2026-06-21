@@ -1,11 +1,7 @@
 const enhancementStyles = document.createElement("link");
 enhancementStyles.rel = "stylesheet";
-enhancementStyles.href = "enhancements.css?v=d221531";
+enhancementStyles.href = "enhancements.css?v=clean-bg-1";
 document.head.appendChild(enhancementStyles);
-
-document
-  .querySelectorAll(".services, .work-band, .pricing, .faq-section, .cta-band")
-  .forEach((section) => section.classList.add("dark-fixed-bg"));
 
 const navToggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
