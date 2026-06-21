@@ -36,6 +36,21 @@ serviceDescriptions.forEach((description, selector) => {
   }
 });
 
+const pricingGrid = document.querySelector("#kainos .price-grid");
+if (pricingGrid && !document.querySelector(".pricing-more-action")) {
+  const pricingAction = document.createElement("div");
+  pricingAction.className = "pricing-more-action";
+
+  const pricingLink = document.createElement("a");
+  pricingLink.className = "button primary";
+  pricingLink.href = "paslaugu-kainos/";
+  pricingLink.textContent = "Daugiau";
+  pricingLink.setAttribute("aria-label", "Atidaryti paslaugų kainoraštį");
+
+  pricingAction.append(pricingLink);
+  pricingGrid.insertAdjacentElement("afterend", pricingAction);
+}
+
 const sectionThemes = [
   [".trust-strip", "section-dark"],
   [".intro", "section-gray"],
