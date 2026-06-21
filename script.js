@@ -1,7 +1,11 @@
 const enhancementStyles = document.createElement("link");
 enhancementStyles.rel = "stylesheet";
-enhancementStyles.href = "enhancements.css?v=0c86003";
+enhancementStyles.href = "enhancements.css?v=f127c24";
 document.head.appendChild(enhancementStyles);
+
+document
+  .querySelectorAll(".intro, .services, .pricing, .faq-section, .work-band, .cta-band")
+  .forEach((section) => section.classList.add("dark-fixed-bg"));
 
 const navToggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
