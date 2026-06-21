@@ -261,6 +261,11 @@ body {
   list-style: none;
 }
 
+.contact-card:nth-child(3) ul {
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+
 .contact-card a {
   color: var(--text);
   font-weight: 800;
