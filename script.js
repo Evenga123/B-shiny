@@ -1,3 +1,29 @@
+const serviceDescriptions = new Map([
+  [
+    ".service-polish p",
+    "Profesionalus kėbulo poliravimas leidžia atkurti prarastą automobilio išvaizdą. Pašalinami smulkūs įbrėžimai, paviršiaus nelygumai bei oksidacijos požymiai, o lakas įgauna gilų, sodrų blizgesį ir veidrodinį atspindį."
+  ],
+  [
+    ".service-interior p",
+    "Salono giluminis valymas pašalina susikaupusius nešvarumus net sunkiai pasiekiamose vietose. Išvalomos sėdynės, kiliminė danga, plastiko detalės, pašalinamos dėmės, nemalonūs kvapai ir bakterijos."
+  ],
+  [
+    ".service-headlights p",
+    "Poliravimo ir atkūrimo metu pašalinamas pažeistas žibintų sluoksnis, atkuriamas skaidrumas bei pagerinamas šviesos pralaidumas. Tai pagerina automobilio estetiką ir prisideda prie saugesnio vairavimo."
+  ],
+  [
+    ".service-coating p",
+    "Keraminės ir nano technologijomis paremtos dangos sukuria papildomą apsaugą nuo UV spindulių, purvo, cheminių medžiagų ir kasdienio aplinkos poveikio. Automobilis ilgiau išlieka švarus ir blizgus."
+  ]
+]);
+
+serviceDescriptions.forEach((description, selector) => {
+  const element = document.querySelector(selector);
+  if (element) {
+    element.textContent = description;
+  }
+});
+
 const sectionThemes = [
   [".trust-strip", "section-dark"],
   [".intro", "section-gray"],
