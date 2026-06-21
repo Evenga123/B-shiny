@@ -148,7 +148,7 @@ body {
 }
 
 .service-card {
-  min-height: clamp(440px, 34vw, 510px);
+  min-height: clamp(500px, 38vw, 560px);
 }
 
 .service-card-content {
@@ -157,18 +157,18 @@ body {
 }
 
 .service-card h3 {
-  font-size: clamp(22px, 1.7vw, 28px);
+  font-size: clamp(21px, 1.55vw, 27px);
 }
 
 .service-card p {
-  max-width: 94%;
-  margin-top: 18px;
-  font-size: clamp(13px, 0.9vw, 14.5px);
-  line-height: 1.48;
+  max-width: 96%;
+  margin-top: 16px;
+  font-size: clamp(12.5px, 0.82vw, 13.5px);
+  line-height: 1.42;
 }
 
 .service-card a {
-  margin-top: 20px;
+  margin-top: 18px;
 }
 
 #kontaktai.cta-band {
@@ -285,7 +285,7 @@ body {
   }
 
   .service-card {
-    min-height: 420px;
+    min-height: 520px;
   }
 
   .service-card-content {
@@ -294,7 +294,8 @@ body {
 
   .service-card p {
     max-width: 100%;
-    font-size: 13.5px;
+    font-size: 12.5px;
+    line-height: 1.42;
   }
 }
 
@@ -330,7 +331,7 @@ body {
   }
 
   .service-card {
-    min-height: 430px;
+    min-height: 540px;
   }
 }
 
