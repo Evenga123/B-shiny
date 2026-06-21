@@ -1,19 +1,19 @@
 const serviceDescriptions = new Map([
   [
     ".service-polish p",
-    "Profesionalus kėbulo poliravimas leidžia atkurti prarastą automobilio išvaizdą. Pašalinami smulkūs įbrėžimai, paviršiaus nelygumai bei oksidacijos požymiai, o lakas įgauna gilų, sodrų blizgesį ir veidrodinį atspindį."
+    "Profesionalus kėbulo poliravimas leidžia atkurti prarastą automobilio išvaizdą. Pašalinami smulkūs įbrėžimai, paviršiaus nelygumai bei oksidacijos požymiai, o lakas įgauna gilų, sodrų blizgesį ir veidrodinį atspindį. Kruopščiai atlikta lako korekcija išryškina tikrąją automobilio spalvą ir sugrąžina naujo automobilio įspūdį."
   ],
   [
     ".service-interior p",
-    "Salono giluminis valymas pašalina susikaupusius nešvarumus net sunkiai pasiekiamose vietose. Išvalomos sėdynės, kiliminė danga, plastiko detalės, pašalinamos dėmės, nemalonūs kvapai ir bakterijos."
+    "Salono giluminis valymas pašalina susikaupusius nešvarumus net sunkiai pasiekiamose vietose. Specialiomis priemonėmis išvalomos sėdynės, kiliminė danga, plastiko detalės bei kiti paviršiai, pašalinamos dėmės, nemalonūs kvapai ir bakterijos. Po valymo salonas tampa gaivus, higieniškas ir malonus kasdieniam naudojimui."
   ],
   [
     ".service-headlights p",
-    "Poliravimo ir atkūrimo metu pašalinamas pažeistas žibintų sluoksnis, atkuriamas skaidrumas bei pagerinamas šviesos pralaidumas. Tai pagerina automobilio estetiką ir prisideda prie saugesnio vairavimo."
+    "Laikui bėgant žibintų paviršius praranda skaidrumą, pagelsta ir tampa matinis, dėl ko sumažėja apšvietimo efektyvumas. Poliravimo ir atkūrimo proceso metu pašalinamas pažeistas sluoksnis, atkuriamas skaidrumas bei pagerinamas šviesos pralaidumas. Tai ne tik pagerina automobilio estetiką, bet ir prisideda prie saugesnio vairavimo."
   ],
   [
     ".service-coating p",
-    "Keraminės ir nano technologijomis paremtos dangos sukuria papildomą apsaugą nuo UV spindulių, purvo, cheminių medžiagų ir kasdienio aplinkos poveikio. Automobilis ilgiau išlieka švarus ir blizgus."
+    "Keraminės ir nano technologijomis paremtos dangos sukuria papildomą apsauginį sluoksnį ant automobilio paviršiaus. Jos apsaugo laką nuo UV spindulių, purvo, cheminių medžiagų ir kasdienio aplinkos poveikio. Dėl hidrofobinių savybių automobilis ilgiau išlieka švarus, lengviau prižiūrimas ir išsaugo nepriekaištingą blizgesį."
   ]
 ]);
 
