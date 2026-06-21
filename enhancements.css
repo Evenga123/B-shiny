@@ -59,44 +59,30 @@ body {
   overflow: hidden;
 }
 
-.dark-fixed-bg,
-.intro,
-.services,
-.pricing,
-.faq-section,
-.work-band,
-.cta-band {
+.dark-fixed-bg {
   position: relative;
+  isolation: isolate;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
-    url("assets/porsche-911-bg.jpg");
+    url('/porsche-911-bg.jpg?v=2');
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
+.dark-fixed-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
 .dark-fixed-bg::before,
-.dark-fixed-bg::after,
-.intro::before,
-.intro::after,
-.services::before,
-.services::after,
-.pricing::before,
-.pricing::after,
-.faq-section::before,
-.faq-section::after,
-.work-band::before,
-.work-band::after,
-.cta-band::before,
-.cta-band::after {
+.dark-fixed-bg::after {
   display: none !important;
 }
 
 .trust-strip,
-.work-band,
-.price-grid article,
-.cta-band {
+.price-grid article {
   background-color: rgba(7, 9, 11, 0.36);
 }
 
@@ -230,13 +216,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .dark-fixed-bg,
-  .intro,
-  .services,
-  .pricing,
-  .faq-section,
-  .work-band,
-  .cta-band {
+  .dark-fixed-bg {
     background-attachment: scroll;
   }
 }
