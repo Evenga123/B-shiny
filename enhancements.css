@@ -59,37 +59,20 @@ body {
   overflow: hidden;
 }
 
-.intro::before,
-.services::before,
-.pricing::before,
-.faq-section::before,
-.work-band::before,
-.cta-band::before {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  background-color: #07090b;
-  background-image: url("assets/porsche-911-bg.jpg");
+.dark-fixed-bg {
+  position: relative;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
+    url("assets/porsche-911-bg.jpg");
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: min(920px, 118vw) auto;
   background-attachment: fixed;
-  content: "";
 }
 
-.intro::after,
-.services::after,
-.pricing::after,
-.faq-section::after,
-.work-band::after,
-.cta-band::after {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background:
-    radial-gradient(circle at center, rgba(7, 9, 11, 0.08), rgba(7, 9, 11, 0.68) 70%),
-    rgba(7, 9, 11, 0.3);
-  content: "";
+.dark-fixed-bg::before,
+.dark-fixed-bg::after {
+  display: none !important;
 }
 
 .trust-strip,
@@ -228,18 +211,13 @@ body {
   }
 }
 
-@media (max-width: 640px) {
-  .intro::before,
-  .services::before,
-  .pricing::before,
-  .faq-section::before,
-  .work-band::before,
-  .cta-band::before {
+@media (max-width: 768px) {
+  .dark-fixed-bg {
     background-attachment: scroll;
-    background-size: 145vw auto;
-    background-position: center 42%;
   }
+}
 
+@media (max-width: 640px) {
   #kontaktai.cta-band {
     max-width: calc(100% - 24px);
     padding-left: 18px;
