@@ -51,7 +51,7 @@ body {
 .site-nav a,
 .service-card a,
 .contact-socials a {
-  transition: color 220ms ease, background 220ms ease, border-color 220ms ease, transform 220ms ease;
+  transition: color 220ms ease, background 220ms ease, border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
 }
 
 .button:hover,
@@ -59,6 +59,10 @@ body {
 .service-card a:hover,
 .contact-socials a:hover {
   transform: translateY(-1px);
+}
+
+.button.primary:hover {
+  box-shadow: 0 14px 34px rgba(214, 178, 94, 0.18);
 }
 
 .button:active,
@@ -156,6 +160,16 @@ body {
 .price-grid article,
 .contact-card {
   background-color: rgba(7, 9, 11, 0.54);
+}
+
+.pricing-more-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 34px;
+}
+
+.pricing-more-action .button {
+  min-width: 150px;
 }
 
 .services-heading h2 {
