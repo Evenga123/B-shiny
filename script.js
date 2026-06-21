@@ -1,3 +1,15 @@
+const headingTextUpdates = new Map([
+  ["#hero-title", "Atnaujiname ne tik automobilio blizgesį – atgaiviname jo sielą"],
+  ["#why-title", "Poliravimas atkuria ne tik blizgesį, bet ir tikrąją automobilio išvaizdą"]
+]);
+
+headingTextUpdates.forEach((text, selector) => {
+  const element = document.querySelector(selector);
+  if (element) {
+    element.textContent = text;
+  }
+});
+
 const serviceDescriptions = new Map([
   [
     ".service-polish p",
